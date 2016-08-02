@@ -7,8 +7,8 @@ var app = express();
 
 //static files are being held in a public directory, so go there.
 app.use(express.static(__dirname + '/public'));
-//get the port, OR 3000
-app.set('port', (process.env.PORT || 3000));
+//get the port, OR 5000
+app.set('port', (process.env.PORT || 5000));
 
 // var lyrics = ['song lyrics', 'singing song', 'this is a song'];
 
@@ -29,6 +29,7 @@ app.get('/api/lyrics', function (req, res){
 });
 
 
-app.listen(app.get('port'), function () {
+var server = app.listen(app.get('port'), function () {
+  var port = server.address().port;
   console.log('Example app listening on port 3000!', app.get('port'));
 });
