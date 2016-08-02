@@ -26,10 +26,10 @@ app.get('/api/lyrics', function (req, res){
   res.send(ex[selection]);
 });
 
-var server = app.listen(3000, function(){
-  var port = server.address().port;
-})
+// var server = app.listen(3000, function(){
+//   var port = server.address().port;
+// })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!', port);
+  console.log('Example app listening on port 3000!');
 });
