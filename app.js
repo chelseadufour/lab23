@@ -33,7 +33,7 @@ app.get('/api/lyrics', function (request, response){
 //app.listen method takes the port we want to listen on and a function to run once you start the server
 //set to server variable to use
 
-app.listen(app.get('port'), function () {
-  // var port = server.address().port;
+var server = app.listen(app.get('port'), function () {
+  var port = server.address().port;
   console.log('Example app listening on port 3000!', app.get('port'));
 });
