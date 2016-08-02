@@ -14,7 +14,7 @@ app.set('port', (process.env.PORT || 5000));
 //we have control over the response here, NOT the request
 app.get('/api/lyrics', function (request, response){
   var selection = Math.floor(Math.random()*ex.length);
-  res.send(ex[selection]);
+  response.send(ex[selection]);
 });
 
 //app.listen method takes the port we want to listen on and a function to run once you start the server
